@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>結帳流程</title>
+</head>
+<style>
+  @import url("pay.css");
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap');
+</style>
+
+<body>
+  <header>
+    <div>
+      <div class="option">
+        <div>
+          <a href="index.html"> <img class="logo" src="home/logo.png"></a>
+        </div>
+        <div class="box1">
+          <div class="seen">
+            <input type="search" id="search" placeholder="Search">
+          </div>
+        </div>
+        <div class="drop">
+          <ul class="dropdown">
+            <p>商品分類</p>
+            <li><a href="honda.html">Honda</a></li>
+            <li><a href="yamaha.html">Yamaha</a></li>
+            <li><a href="suzuki.html">Suzuki</a></li>
+
+          </ul>
+          <ul class="dropdown">
+            <p>客服中心</p>
+            <li><a href="qa.html">常見Q&A</a></li>
+          </ul>
+          <ul class="dropdown">
+            <p>關於我們</p>
+            <li><a href="about.html">小故事</a></li>
+          </ul>
+          <ul class="dropdown">
+            <p>會員中心</p>
+            <li><a href="member.html">更改資料</a></li>
+            <li><a href="member2.html">訂單查詢</a></li>
+            <li><a href="member3.html">更改密碼</a></li>
+          </ul>
+          <a href="login.html">
+            <p>註冊/登入</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="title">
+    <h1>結帳流程</h1>
+  </div>
+  <div class="main">
+    <div class="content">
+      <div class="first">
+        <div class="firstin">
+          <div class="img1"><a href="moto4.html">
+              <h1>Honda CB650R</h1>
+            </a>
+            <a href="moto4.html"><img class="payimg" src="home/homemoto10.png"></a>
+          </div>
+          <div class="paytxt">
+            <div>
+              <h2>姓名*:</h2><input class="name" type="text">
+            </div>
+            <div class="payway">
+              <h2>性別*:</h2>
+              <input name="pway" type="radio">
+              <h2>男</h2>
+
+              <input name="pway" type="radio">
+              <h2>女</h2>
+            </div>
+            <div>
+              <h2>身分證字號*:</h2><input class="code" type="text">
+            </div>
+            <div class="payway">
+              <h2>付款方式*:</h2>
+              <input name="pway" value="bTwo" type="radio">
+              <h2>現金</h2>
+
+              <input name="pway" value="bOne" type="radio">
+              <h2>信用卡</h2>
+            </div>
+            <div class="bS01 box bBW" style="display:block;">
+              <h2>卡號:<input class="credit" type="text">-<input class="credit" type="text">-<input class="credit"
+                  type="text">-<input class="credit" type="text"></h2>
+              <h2>有效期限MM/YY:<input class="day" type="text" placeholder="01/25">背面後三碼:<input class="day" type="text"
+                  placeholder="123"></h2>
+
+              我們的線上付款方式有以下機制: <br>
+              一.信用卡(限<font color="#FF0000">NT300元</font>以上): Visa、 Master、JCB、U卡、America Express
+              <br>
+
+
+              二.銀行晶片卡線上轉帳(限NT200~20,000以內) 線上交易成功後, 我們將立即為你處理出貨的動作,謝謝。
+            </div>
+
+            <div class="bS02 box bBW">以現金支付，租車前再到實體店面支付就可以了哦。
+            </div>
+            <div>
+              <h2>租用日期*:</h2><input class="start" type="date">
+            </div>
+            <div>
+              <h2>結束日期*:</h2><input class="end" type="date">
+            </div>
+            <div>
+              <h2>共</h2>
+              <h2></h2>
+              <h2>天</h2>
+            </div>
+            <h2>總金額:$</h2>
+            <input class="paybtn" type="button" value="結帳">
+            <h2>注意事項: 領車當天請攜帶本人駕照哦!</h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="foot">
+      <h5>Copyright: RentUMoto 好騎一直騎</h5>
+      <h5>服務時間:周一至周日 A.M 8:00~P.M 6:00</h5>
+      <h5>電話:(03)38123456</h5>
+      <h5>地址:32023 桃園市中壢區中北路2OO號</h5>
+      <h5>E-mail:rentumoto@gmail.com</h5>
+    </div>
+
+  </footer>
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('input[type="radio"]').click(function () {
+        if ($(this).attr("value") == "bOne") {
+          $(".box").hide();
+          $(".bS01").show();
+        }
+        if ($(this).attr("value") == "bTwo") {
+          $(".box").hide();
+          $(".bS02").show();
+        }
+
+      });
+    });
+  </script>
+</body>
+
+</html>
